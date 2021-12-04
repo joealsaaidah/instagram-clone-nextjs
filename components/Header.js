@@ -47,11 +47,14 @@ const Header = () => {
           <PlusCircleIcon className='navBtn' />
           <UserGroupIcon className='navBtn' />
           <HeartIcon className='navBtn' />
-          <img
-            src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat-800x400.png'
-            alt='cat'
-            className='h-10   object-cover rounded-full cursor-pointer'
-          />
+          <div className='relative h-10 w-10 '>
+            <Image
+              src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat-800x400.png'
+              layout='fill'
+              alt='cat'
+              className='object-cover rounded-full cursor-pointer'
+            />
+          </div>
         </div>
       </div>
     </header>
