@@ -1,7 +1,5 @@
 import Story from "./Story";
 import { useEffect, useState } from "react";
-import { fakeCardData } from "../../data/fakeData";
-import fake from "faker";
 
 const Stories = ({ profiles }) => {
   return (
