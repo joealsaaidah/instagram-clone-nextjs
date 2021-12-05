@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["icatcare.org"],
+    domains: ["icatcare.org", "lh3.googleusercontent.com"],
   },
 };

@@ -13,7 +13,6 @@ export default function Home({ profiles }) {
       </Head>
 
       <main className=''>
-        <Header />
         <Feed profiles={profiles} />
         {/* <model/> */}
       </main>
