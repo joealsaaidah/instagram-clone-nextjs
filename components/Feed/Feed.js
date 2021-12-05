@@ -4,7 +4,7 @@ import MiniProfile from "./MiniProfile";
 import Suggestions from "./Suggestions";
 import { useSession } from "next-auth/react";
 
-const Feed = ({ profiles }) => {
+const Feed = () => {
   const { data: session } = useSession();
 
   return (
@@ -14,7 +14,7 @@ const Feed = ({ profiles }) => {
       }`}
     >
       <section className='col-span-2'>
-        <Stories profiles={profiles} />
+        <Stories /* profiles={profiles} */ />
         <Posts />
       </section>
 
@@ -22,7 +22,7 @@ const Feed = ({ profiles }) => {
         <section className='hidden xl:inline-grid md:col-span-1'>
           <div className='fixed t-20'>
             <MiniProfile />
-            <Suggestions profiles={profiles} />
+            <Suggestions /* profiles={profiles} */ />
           </div>
         </section>
       )}

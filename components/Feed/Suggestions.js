@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Suggest from "./Suggest";
+import { profilesState } from "../../atoms/profilesAtom";
+import { useRecoilValue } from "recoil";
 
-const Suggestions = ({ profiles }) => {
+const Suggestions = () => {
+  const profiles = useRecoilValue(profilesState);
   return (
     <div className='mt-4 ml-10'>
       <div className='flex justify-between items-center text-sm mb-5'>
