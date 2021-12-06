@@ -22,6 +22,7 @@ const Posts = () => {
       {posts.map((post) => (
         <Post
           key={post.id}
+          id={post.id}
           username={post.data().username}
           userImage={post.data().profileImg}
           postImage={post.data().image}
