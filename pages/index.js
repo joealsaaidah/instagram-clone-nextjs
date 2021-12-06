@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import Feed from "../components/Feed/Feed";
-import Header from "../components/Header";
 import axios from "axios";
 import Modal from "../components/Modal";
 import { useRecoilState } from "recoil";
@@ -19,7 +18,7 @@ export default function Home({ profiles }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Feed /* profiles={profiles} */ />
+      <Feed />
       <Modal />
     </div>
   );
