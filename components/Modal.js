@@ -42,12 +42,14 @@ const Modal = () => {
     // Create a reference to image
     const imageRef = ref(storage, `posts/${docRef.id}/image`);
 
-    uploadString(imageRef, selectedFile, "data_url").then(async (snapshot) => {
-      const downloadURL = await getDownloadURL(imageRef);
-      await updateDoc(doc(db, "posts", docRef.id), {
-        image: downloadURL,
-      });
-    });
+    await uploadString(imageRef, selectedFile, "data_url").then(
+      async (snapshot) => {
+        const downloadURL = await getDownloadURL(imageRef);
+        await updateDoc(doc(db, "posts", docRef.id), {
+          image: downloadURL,
+        });
+      }
+    );
 
     setOpen(false);
     setSelectedFile(null);

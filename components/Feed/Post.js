@@ -30,7 +30,7 @@ const Post = ({ id, username, userImage, postImage, caption }) => {
       </div>
       {/* img */}
       <div className='relative h-96 w-full'>
-        <Image src={postImage} layout='fill' objectFit='cover' />
+        {postImage && <Image src={postImage} layout='fill' objectFit='cover' />}
       </div>
       {/* icons */}
       <div className='flex justify-between px-4 pt-4'>
